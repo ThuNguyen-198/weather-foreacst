@@ -68,7 +68,7 @@ function App() {
 
   const locations = [
     {
-      location: "Lubbock",
+      location: "Lubbock, US",
       time: "12AM",
       weather: "cloudy",
       temp: 56,
@@ -76,12 +76,12 @@ function App() {
       low: 45,
     },
     {
-      location: "Lubbock",
-      time: "12AM",
-      weather: "cloudy",
-      temp: 56,
-      high: 67,
-      low: 45,
+      location: "NewYork, US",
+      time: "8AM",
+      weather: "snowing",
+      temp: 50,
+      high: 58,
+      low: 34,
     },
   ];
   useEffect(() => {
