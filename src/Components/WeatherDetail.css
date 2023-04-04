@@ -1,7 +1,7 @@
 .weather-container {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
+  margin-left: 20%;
+  /* display: flex; */
+  /* justify-content: flex-end; */
 }
 .dashboard-container {
   display: flex;
@@ -52,12 +52,14 @@
 }
 /* Dashboard */
 .display-data {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 }
 .dashboard-block {
-  max-width: 50%;
   max-height: 38rem;
   overflow: auto;
+  justify-self: flex-start;
 }
 .dashboard {
   background-color: rgba(0, 0, 0, 0.526);
@@ -72,7 +74,7 @@
   color: #fff;
   font-size: 1.6rem;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 th,
 td {
@@ -89,4 +91,9 @@ td {
 }
 XAxis {
   color: #000;
+}
+.charts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }

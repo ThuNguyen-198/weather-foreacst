@@ -20,7 +20,7 @@ const NavBar = () => {
     {
       location: "NewYork",
       time: "8AM",
-      weather: "Cloudy",
+      weather: "Clear Sky",
       temp: 50,
       high: 58,
       low: 34,

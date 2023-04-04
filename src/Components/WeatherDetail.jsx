@@ -101,10 +101,10 @@ const WeatherDetail = () => {
               ))}
             </table>
           </div>
-          <div>
+          <div className="charts">
             <LineChart
-              width={600}
-              height={340}
+              width={500}
+              height={180}
               data={weatherList}
               margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
             >
@@ -124,27 +124,30 @@ const WeatherDetail = () => {
               <Tooltip />
             </LineChart>
             <p className="chart-title">Temperature</p>
+            <LineChart
+              width={500}
+              height={180}
+              data={weatherList}
+              margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
+            >
+              <Line type="monotone" dataKey="windSpeed" stroke="#8884d8" />
+              <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+              <XAxis
+                dataKey="date"
+                tick={{
+                  fill: "white",
+                  angle: 45,
+                  textAnchor: "start",
+                  fontSize: 7,
+                }}
+                interval={10}
+              />
+              <YAxis tick={{ fill: "white" }} />
+              <Tooltip />
+            </LineChart>
+            <p className="chart-title">Wind Speed</p>
           </div>
         </div>
-        //Stats
-        {/* <div className="widget-container">
-          <div className="widgets-block">
-            <div className="widget">
-              <p className="widget-label">Average Temp</p>
-              <p className="widget-value">{stats.average}&deg;</p>
-            </div>
-            <div className="widget">
-              <p className="widget-label">Temp Range</p>
-              <p className="widget-value">
-                {stats.low}&deg; - {stats.high}&deg;
-              </p>
-            </div>
-            <div className="widget">
-              <p className="widget-label">Total Data Sets</p>
-              <p className="widget-value">{stats.total}</p>
-            </div>
-          </div>
-        </div> */}
       </div>
     </div>
   );
